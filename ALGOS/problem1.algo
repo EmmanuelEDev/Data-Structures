@@ -24,13 +24,13 @@ BEGIN
     FOR j FROM 0 TO 4 DO
         count = 0
         FOR i FROM 0 TO 3 DO
-            IF (Set 1[j] := Set 2[i]) THEN
+            IF (Set2[j] := Set1[i]) THEN
             BREAK
         END_IF
     END_FOR
-        sum2 := sum + Set 1[i]
+        sum2 := sum2 + Set2[j]
     END_IF
-    sum := sum2
+    sum := sum1 + sum2
     
     Write("The sum is:" sum)
 END
